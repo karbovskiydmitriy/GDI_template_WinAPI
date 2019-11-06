@@ -1,0 +1,22 @@
+﻿Построение начато 30.10.2019 17:24:54.
+     1>Проект "C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\WinAPI_template\WinAPI_template.vcxproj" в узле 2 (целевые объекты build).
+     1>InitializeBuildStatus:
+         Создание "Release\WinAPI_template.unsuccessfulbuild", так как было задано "AlwaysCreate".
+       ClCompile:
+         D:\Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt Teamplate.c
+         Teamplate.c
+       Link:
+         D:\Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\Release\WinAPI_template.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\WinAPI_template.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\Release\WinAPI_template.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\Release\WinAPI_template.lib" /MACHINE:X86 Release\Teamplate.obj
+         Создание кода
+         Создание кода завершено
+         WinAPI_template.vcxproj -> C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\Release\WinAPI_template.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\Release\WinAPI_template.exe;#1" /manifest Release\WinAPI_template.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Файл "Release\WinAPI_template.unsuccessfulbuild" удаляется.
+         Обращение к "Release\WinAPI_template.lastbuildstate".
+     1>Построение проекта "C:\Users\DimaRich\Documents\Visual Studio projects\C\WinAPI_template\WinAPI_template\WinAPI_template.vcxproj" завершено (целевые объекты build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:01.42
