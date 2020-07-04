@@ -6,7 +6,7 @@ HWND hMainWindow;
 HDC hdcBack;
 HBITMAP hbmBack;
 
-WNDCLASSEX WndClassEx =
+WNDCLASSEX wndClass =
 {
 	sizeof(WNDCLASSEX), 0, (WNDPROC)WindowProc, 0, 0, (HINSTANCE)0,
 		(HICON)0, (HCURSOR)0, (HBRUSH)0, (TCHAR *)NULL, (TCHAR *)MAIN_CLASS_NAME, 0
@@ -16,10 +16,10 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 {
 	MSG msg;
 
-	WndClassEx.hInstance = hInstance;
-	WndClassEx.hCursor = LoadCursor((HINSTANCE)0, IDC_ARROW);
-	RegisterClassEx(&WndClassEx);
-	hMainWindow = CreateWindowEx(0, MAIN_CLASS_NAME, CAPTION, windowStyle, 0, 0, 800, 600, (HWND)0, (HMENU)0, hInstance, (LPVOID)NULL);
+	wndClass.hInstance = hInstance;
+	wndClass.hCursor = LoadCursor((HINSTANCE)0, IDC_ARROW);
+	RegisterClassEx(&wndClass);
+	hMainWindow = CreateWindowEx(0, MAIN_CLASS_NAME, CAPTION, windowStyle, 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, (HWND)0, (HMENU)0, hInstance, (LPVOID)NULL);
 
 	while (GetMessage(&msg, (HWND)0, 0, 0))
 	{
