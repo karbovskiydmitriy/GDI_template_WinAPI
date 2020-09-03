@@ -45,29 +45,31 @@ LRESULT WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		hbmBack = CreateCompatibleBitmap(hdc, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN));
 		SelectObject(hdcBack, hbmBack);
 		ReleaseDC((HWND)0, hdc);
-		return 0;
+		break;
 	case WM_SIZE:
 		GetClientRect(hWnd, &clientRect);
-		return 0;
+		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
-		return 0;
+		break;
 	case WM_PAINT:
 		Draw();
 		BeginPaint(hWnd, &ps);
 		BitBlt(ps.hdc, 0, 0, clientRect.right, clientRect.bottom, hdcBack, 0, 0, SRCCOPY);
 		EndPaint(hWnd, &ps);
 		InvalidateRect(hWnd, (RECT *)NULL, FALSE);
-		return 0;
+		break;
 	case WM_KEYDOWN:
 		if (wParam == VK_ESCAPE)
 		{
 			PostQuitMessage(0);
-			return 0;
+			break;
 		}
+	default:
+		return DefWindowProc(hWnd, uMsg, wParam, lParam);
 	}
 
-	return DefWindowProc(hWnd, uMsg, wParam, lParam);
+	return 0;
 }
 
 void Draw()
